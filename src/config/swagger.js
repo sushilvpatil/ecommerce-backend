@@ -17,7 +17,11 @@ const options = {
         },
         servers: [
             {
-                url: 'http://localhost:8080',
+                url: 'https://ecommerce-backend-5-ocnz.onrender.com', // Live Render URL
+                description: 'Live server',
+            },
+            {
+                url: 'http://localhost:8080', // Local Development
                 description: 'Local server',
             },
         ],
@@ -25,6 +29,7 @@ const options = {
     apis: [`${__dirname}/../routes/*.js`], // Path to API routes
 };
 
+// Generate Swagger documentation
 const swaggerSpec = swaggerJSDoc(options);
 
 const setupSwagger = (app) => {
